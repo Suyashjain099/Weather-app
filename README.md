@@ -1,0 +1,1 @@
+"# Weather app:this is a weather app which tells about weather parameters about your location and any other location "
