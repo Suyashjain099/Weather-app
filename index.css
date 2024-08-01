@@ -1,0 +1,252 @@
+/* Apply the same styling for both tabs when active */
+.current-tab {
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 4px;
+    display: inline-block;
+    width: 120px; /* Adjust this width as needed */
+    cursor: pointer;
+    padding: 5px 8px;
+    font-size: 0.75rem;
+    letter-spacing: 1.75px;
+}
+
+/* Specific width for #tab2 */
+#tab2.current-tab {
+    width: 130px;
+}
+
+/* Ensure active class properly displays the form container */
+.form-container.active {
+    transform: scale(1);
+    opacity: 1;
+    display: flex;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+:root {
+    --colorDark1: #112D4E;
+    --colorDark2: #3F72AF;
+    --colorLight1: #DBE2EF;
+    --colorLight2: #F9F7F7;
+}
+
+body {
+    width: 100vw;
+    height: 105vh;
+    color: var(--colorLight2);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 550px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.weather-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 4rem;
+}
+
+.btn {
+    all: unset;
+    appearance: none;
+    border: none;
+    color: white;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: var(--colorDark2);
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+}
+
+.sub-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grant-location {
+    display: none;
+}
+
+.grant-location.active {
+    display: flex;
+}
+
+.grant-location img {
+    margin-bottom: 2rem;
+}
+
+.grant-location p:first-of-type {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.grant-location p:last-of-type {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+    margin-left: 13px;
+}
+
+.loading-container {
+    display: none;
+}
+
+.loading-container.active {
+    display: flex;
+}
+
+.loading-container p {
+    text-transform: uppercase;
+}
+
+.user-info-container {
+    display: none;
+}
+
+.user-info-container.active {
+    display: flex;
+
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.name p {
+    font-size: 2rem;
+}
+
+.user-info-container {
+    font-size: 1.5rem;
+    font-weight: 200;
+    height: 80%;
+    margin-top:-20px;
+}
+
+.user-info-container img {
+    width: 90px;
+    height: 90px;
+}
+
+.name img {
+    width: 30px;
+    height: 30px;
+}
+
+.temp {
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+
+.parameter-container {
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.parameter {
+    background-color: rgba(219, 226, 239, 0.5);
+    width: 30%;
+    max-width: 200px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+}
+
+.parameter img {
+    width: 50px;
+    height: 50px;
+}
+
+.parameter p:first-of-type {
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.parameter p:last-of-type {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+.form-container {
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+}
+
+.form-container.active {
+    display: flex;
+}
+
+.search {
+    all: unset;
+    width: calc(100% - 80px);
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+}
+
+.search::placeholder {
+    color: white;
+}
+
+.form-container input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.form-container .btn {
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-top: 10px;
+}
